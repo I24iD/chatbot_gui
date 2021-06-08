@@ -7,13 +7,15 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrp/4.3.1/css/bootstrap.min.css"  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <title><!-- Der Titel des Browsers --></title>
+        <title>{% block title %} {% endblock %}</title>
     </head>
     <body>
         <div class="container">
-        <div class="alert alert-danger"><!-- Fehlermeldungen --></div>
+            {% for message in get_flashe_messages () %}
+                <div class="alert alert-danger">{{ message}}</div>
+            {% endfor %}
         </div>
-        <!-- chatbot_ausgabe -->
+        {% block chatbot_ausgabe %} {% endblock %}
 
         <!-- Der Rest vom Schützenfest -->
 
