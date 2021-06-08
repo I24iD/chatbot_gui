@@ -16,16 +16,19 @@ from chatbot import Chatbot
 class Ui_MainWindow(object):
 
     def Button_Los_click(self):
-        zufallsantworten = ["Oh wirklich...", "Interessant", "Das kann man so sehen.", "Ich verstehe..."]
-        reaktionen = {"hallo": "aber hallo",
-                    "geht": "Was verstehst Du darunter",
-                    "schmeckt": "Ich habe keinen Geschmackssinn"}
+        zufallsantworten = ["Entschuldigung,das habe ich nicht verstanden!",
+                        "Interessant",
+                        "Ach wirklich...",
+                        "Ich verstehe!"]
+        reaktionen = {"hallo": "Schönen guten Tag!",
+                  "geht": "Mir geht es gut! Und wie geht es Ihnen?",
+                  "gefühle": "Das weiß ich nicht,denn ich habe keine Gefühle!"}
 
         if self.chatbot_input.text() == "":
             message = QMessageBox()
             message.setIcon(QMessageBox.Warning)
             message.setText('Keine Eingabe!')
-            message.setInformativeText('Ohne Frage kann ich nicht antworten.')
+            message.setInformativeText('Ohne Frage kann ich nicht antworten!')
             message.exec_()
         else:
             bot = Chatbot(reaktionen, zufallsantworten)
