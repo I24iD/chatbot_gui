@@ -99,11 +99,11 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Chatbot"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Chatbot-v3"))
         self.label_Welcome.setText(_translate("MainWindow", "Willkommen"))
         self.label_Question.setText(_translate("MainWindow", "Sprich mit mir..."))
         self.chatbot_input.setPlaceholderText(_translate("MainWindow", "an dieser Stelle..."))
-        self.Button_Los.setText(_translate("MainWindow", "Los!"))
+        self.Button_Los.setText(_translate("MainWindow", "Go!"))
         self.Button_Bye.setText(_translate("MainWindow", "Bye"))
 
 
