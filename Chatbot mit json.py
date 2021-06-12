@@ -7,7 +7,6 @@ import json
 json = json.loads(open('antworten.json').read())
 antworten = json['antworten']
 reaktion = json['reaktionen']
-print(json['antworten'])
 
 
 class Chatbot:
